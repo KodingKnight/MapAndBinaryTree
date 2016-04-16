@@ -1,9 +1,12 @@
 #include <iostream>
-#include "binTree.h"
+//#include "binTree.h"
+#include "map.h"
 
 using namespace std;
 
 int main(){
+
+    MapIterator<int,int> iter2;
 
     BinTree<int> myBinTree;
     /*
@@ -44,7 +47,6 @@ int main(){
     iter = myBinTree.begin();
     iter = iter.successor();
     cout << *iter << endl << endl;
-
 
     /*
     cout << endl << endl; //<< *myBinTree.begin() << endl;

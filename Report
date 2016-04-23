@@ -1,3 +1,10 @@
 The classes work as expected.
 Make sure that binTree.h is in the same folder as map.h
 The main.cpp has a main in it that acts as a test driver.
+
+
+On the first turn in I forgot to check if a node existed before inserting,
+insert with operator[], and remove my last == comparison. These were implemented
+before I changed everything to the more modular design (2 seperate classes).
+I hope you will accept these changes, but even if you don't, I want them there for
+the sake of completeness.

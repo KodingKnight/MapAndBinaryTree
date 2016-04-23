@@ -19,6 +19,9 @@ int main(){
     myMap.insert(pair<int,int>(5,10));
     myMap.insert(pair<int,int>(6,12));
     myMap.insert(pair<int,int>(7,14));
+    myMap[99] = 5;
+    myMap[100];
+    myMap[99] = 198;
 
 
     Map<int,int> newMap = myMap;

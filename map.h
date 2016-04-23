@@ -73,7 +73,7 @@ class Map{
 public:
     typedef MapIterator<T,S> iterator;
 
-    Map() : binTree() {}
+    Map() : binTree() {} // mapSize(0)
     Map(Map<T,S> & m) { transfer(m); }
     ~Map();
     void transfer(Map<T,S> & m);
@@ -94,6 +94,7 @@ public:
     void swap(Map<T,S> & m);
 
 private:
+    //int mapSize;
     BinTree<pair<T,S>> binTree;
 };
 
@@ -105,6 +106,7 @@ inline Map<T,S>::~Map(){
 template <typename T, typename S>
 inline void Map<T,S>::transfer(Map<T,S> & m){
     binTree = m.binTree;
+    //mapSize = m.mapSize;
 }
 
 template <typename T, typename S>
@@ -116,11 +118,13 @@ inline Map<T,S>& Map<T,S>::operator=(const Map<T,S> & m){
 template <typename T, typename S>
 inline S& Map<T,S>::operator[](const T & element){
     MapIterator<T,S> iter;
-    //MapIterator<T,S> emptyIter;
+    MapIterator<T,S> emptyIter;
+    S temp;
     iter = find(element);
-    //if(iter == emptyIter){
-    //    insert(pair<T,S>(element, NULL));
-    //}
+    if(iter == emptyIter){
+        insert(pair<T,S>(element, temp));
+    }
+    iter = find(element);
     return iter->second;
 }
 
@@ -173,6 +177,10 @@ inline typename Map<T,S>::iterator Map<T,S>::find(const T & element) const{
 
 template <typename T, typename S>
 inline bool Map<T,S>::insert(const pair<T,S> & element){
+    MapIterator<T,S> emptyIter;
+    if(find(element) != emptyIter){
+        return false;
+    }
     return binTree.insert(element);
 }
 

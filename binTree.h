@@ -69,7 +69,7 @@ public:
     BinTreeIterator<T> & left();
     BinTreeIterator<T> & right();
     BinTreeIterator<T> & successor();
-    BinTreeIterator<T> & predecessor();\
+    BinTreeIterator<T> & predecessor();
 
 private:
     //iterator min(const iterator iter) const;
@@ -313,7 +313,7 @@ inline int BinTree<T>::count(const T & element) const{
 template <typename T>
 inline typename BinTree<T>::iterator BinTree<T>::find(const T & element) const{
     BinTreeIterator<T> iter = head();
-    while(iter.pNode != nullptr && *iter != element){
+    while(iter.pNode != nullptr && (*iter < element || element < *iter)){ //*iter != element
         if(element < *iter){
             iter.left();
         }else{
@@ -332,7 +332,7 @@ inline bool BinTree<T>::insert(const T & element){
         BinTreeNode<T>* x = pHeadNode;
         while(x != nullptr){
             y = x;
-            if(element == x->element){
+            if(element == x->element){ // I use == because they are pairs
                 return false;
             }else if(element < x->element){
                 x = x->left;

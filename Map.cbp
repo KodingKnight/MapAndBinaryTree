@@ -31,11 +31,10 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="Report" />
+		<Unit filename="binTree.h" />
 		<Unit filename="main.cpp" />
-		<Unit filename="map.cpp" />
 		<Unit filename="map.h" />
-		<Unit filename="mapIterator.cpp" />
-		<Unit filename="mapNode.cpp" />
 		<Extensions>
 			<code_completion />
 			<envvars />

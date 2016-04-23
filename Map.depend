@@ -1,7 +1,7 @@
 # depslib dependency file v1.0
-1460809984 source:/home/damonster/Clarkson/Sophomore Year/Spring/CS 344/Map/main.cpp
+1461337532 source:/home/damonster/Clarkson/Sophomore Year/Spring/CS 344/Map/main.cpp
 	<iostream>
-	"binTree.h"
+	"map.h"
 
 1460031067 /home/damonster/Clarkson/Sophomore Year/Spring/CS 344/Map/map.cpp
 
@@ -11,9 +11,8 @@
 
 1460030671 source:/home/damonster/Clarkson/Sophomore Year/Spring/CS 344/Map/mapNode.cpp
 
-1460631827 /home/damonster/Clarkson/Sophomore Year/Spring/CS 344/Map/map.h
-	<iostream>
+1461337591 /home/damonster/Clarkson/Sophomore Year/Spring/CS 344/Map/map.h
+	"binTree.h"
 
-1460809976 /home/damonster/Clarkson/Sophomore Year/Spring/CS 344/Map/binTree.h
-	<iostream>
+1461337631 /home/damonster/Clarkson/Sophomore Year/Spring/CS 344/Map/binTree.h
 

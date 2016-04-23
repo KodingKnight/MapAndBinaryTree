@@ -1,0 +1,3 @@
+﻿The classes work as expected.
+Make sure that binTree.h is in the same folder as map.h
+The main.cpp has a main in it that acts as a test driver.
